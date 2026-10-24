@@ -2233,22 +2233,25 @@
 }
 
 .contact-info-card > div:first-child > p,
-.dropoff-card > div:first-child > p {
+.dropoff-card > div:first-child > p,
+.contact-card-intro {
   font-size: 0.92rem;
   color: var(--text-muted);
   line-height: 1.55;
-  margin-bottom: 1.25rem;
-  min-height: 2.85rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  min-height: 3.1rem;
 }
 
 .contact-info-list {
   list-style: none;
   padding: 0;
-  margin: 0.5rem 0 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   flex: 1 1 auto;
+  width: 100%;
 }
 
 .contact-info-item {
@@ -2258,12 +2261,30 @@
   min-height: 3.6rem;
 }
 
+@media (min-width: 640px) {
+  .contact-info-card .contact-card-intro {
+    min-height: 3.1rem;
+  }
+
+  .contact-info-list > .contact-info-item:nth-child(1) {
+    min-height: 4rem;
+  }
+
+  .contact-info-list > .contact-info-item:nth-child(2) {
+    min-height: 3.5rem;
+  }
+
+  .contact-info-list > .contact-info-item:nth-child(3) {
+    min-height: 3.5rem;
+  }
+}
+
 .contact-info-icon {
   width: 22px;
   height: 22px;
   color: var(--color-copper);
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .contact-info-label {
@@ -2274,6 +2295,7 @@
   color: var(--text-muted);
   display: block;
   margin-bottom: 0.25rem;
+  line-height: 1.2;
 }
 
 .contact-card-footer-note,
