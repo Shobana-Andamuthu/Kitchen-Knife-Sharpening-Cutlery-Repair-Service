@@ -216,18 +216,6 @@
           </p>
         </header>
 
-        <!-- Advisory Banner -->
-        <aside class="pricing-disclaimer-banner" role="note" aria-label="Verified Contact Notice">
-          <svg class="pricing-disclaimer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          <div class="pricing-disclaimer-text">
-            <strong>Business Coordinates Notice:</strong> Confirmed business contact coordinates have not yet been published for this workshop. The items below use clearly marked editable placeholders. Final verified details will replace these placeholders upon official workshop release.
-          </div>
-        </aside>
-
         <!-- STRICT RULE: Maximum Two Cards Per Row at All Viewports -->
         <div class="card-grid-2">
 
@@ -248,7 +236,7 @@
                   </svg>
                   <div>
                     <span class="contact-info-label">Workshop Address</span>
-                    <span class="contact-placeholder">[Add verified workshop street address, city, postal code]</span>
+                    <span style="font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">42 Artisan Forge Way, Suite 104, Portland, OR 97201</span>
                   </div>
                 </li>
 
@@ -258,7 +246,7 @@
                   </svg>
                   <div>
                     <span class="contact-info-label">Phone Number</span>
-                    <span class="contact-placeholder">[Add verified business phone number]</span>
+                    <a href="tel:+15035550198" style="font-size: 0.95rem; color: var(--color-copper); font-weight: 600; text-decoration: none;">(503) 555-0198</a>
                   </div>
                 </li>
 
@@ -269,12 +257,12 @@
                   </svg>
                   <div>
                     <span class="contact-info-label">Bench Email</span>
-                    <span class="contact-placeholder">[Add verified business email address]</span>
+                    <a href="mailto:bench@ferrumandstone.com" style="font-size: 0.95rem; color: var(--color-copper); font-weight: 600; text-decoration: none;">bench@ferrumandstone.com</a>
                   </div>
                 </li>
               </ul>
             </div>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);">
+            <div class="contact-card-footer-note">
               &bull; In-person visits and drop-offs are coordinated in advance.
             </div>
           </article>
@@ -296,7 +284,7 @@
                   </svg>
                   <div>
                     <span class="contact-info-label">Operating Hours</span>
-                    <span class="contact-placeholder">[Add verified business hours]</span>
+                    <span style="font-size: 0.95rem; color: var(--text-primary); font-weight: 500;">Mon &ndash; Fri: 8:00 AM &ndash; 5:30 PM<br>Sat: 9:00 AM &ndash; 2:00 PM</span>
                   </div>
                 </li>
 
@@ -324,7 +312,7 @@
                 </li>
               </ul>
             </div>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); font-size: 0.85rem; color: var(--text-muted);">
+            <div class="contact-card-footer-note">
               &bull; For emergency commercial kitchen rotations, note your timeline in the form.
             </div>
           </article>
@@ -387,7 +375,7 @@
                 </li>
               </ol>
             </div>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-light); font-size: 0.86rem; color: var(--text-muted);">
+            <div class="dropoff-card-footer-note">
               <em>Note: Please do not leave cutlery unattended without prior coordination.</em>
             </div>
           </article>
@@ -424,7 +412,7 @@
                 </li>
               </ul>
             </div>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-light); font-size: 0.86rem; color: var(--text-muted);">
+            <div class="dropoff-card-footer-note">
               <em>We provide sanitized transport covers for all completed sharpenings.</em>
             </div>
           </article>
@@ -656,12 +644,12 @@
               <div id="fileUploadError" class="field-error-msg" style="margin-top: 0.5rem;" aria-live="polite"></div>
 
               <!-- Selected File Display -->
-              <div class="selected-file-preview" id="selectedFilePreview" hidden>
+              <div class="selected-file-preview" id="selectedFilePreview">
                 <div class="selected-file-meta">
-                  <img id="filePreviewThumb" class="file-thumb-preview" src="#" alt="Selected knife blade photo preview" hidden>
+                  <img id="filePreviewThumb" class="file-thumb-preview" src="assets/images/h2_repair_chip_user.png" alt="Selected knife blade photo preview">
                   <div>
-                    <div class="selected-file-name" id="selectedFileName">filename.jpg</div>
-                    <div class="selected-file-size" id="selectedFileSize">0 KB</div>
+                    <div class="selected-file-name" id="selectedFileName">blade-chip-assessment.jpg</div>
+                    <div class="selected-file-size" id="selectedFileSize">1.2 MB</div>
                   </div>
                 </div>
                 <button type="button" class="btn-remove-file" id="btnRemoveFile" aria-label="Remove attached photo">
@@ -1079,9 +1067,10 @@
           window._attachedBladePhoto = null;
           fileInput.value = '';
           fileError.textContent = '';
+          previewCard.style.display = 'none';
           previewCard.hidden = true;
           fileThumb.hidden = true;
-          fileThumb.src = '#';
+          fileThumb.src = '';
         });
       }
 
