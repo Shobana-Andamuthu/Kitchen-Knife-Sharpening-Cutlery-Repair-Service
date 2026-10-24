@@ -2334,7 +2334,7 @@
   margin: 0.5rem 0 0 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.15rem;
   flex: 1 1 auto;
 }
 
@@ -2343,6 +2343,25 @@
   align-items: flex-start;
   gap: 0.85rem;
   min-height: 3.6rem;
+}
+
+@media (min-width: 640px) {
+  .dropoff-card > div:first-child > p {
+    min-height: 2.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dropoff-step-list > .dropoff-step-item:nth-child(1) {
+    min-height: 4.25rem;
+  }
+
+  .dropoff-step-list > .dropoff-step-item:nth-child(2) {
+    min-height: 5.25rem;
+  }
+
+  .dropoff-step-list > .dropoff-step-item:nth-child(3) {
+    min-height: 4.5rem;
+  }
 }
 
 .dropoff-card .contact-info-item {
@@ -2362,6 +2381,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .dropoff-step-text {
