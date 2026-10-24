@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferrum &amp; Stone | The Precision Workshop &bull; Artisan Knife Sharpening</title>
+  <meta name="description" content="Precision waterstone knife sharpening and cutlery repair for culinary professionals and home cooks. Bring every blade back to its best.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-content">
+      <svg class="loader-emblem" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#c06038" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+        <circle cx="24" cy="24" r="19" stroke="#c06038" stroke-width="1.25"/>
+        <path d="M13 31.5L24 37L35 31.5L24 26L13 31.5Z" fill="#c06038" fill-opacity="0.25" stroke="#c06038" stroke-width="1.2"/>
+        <path d="M24 6C24 6 28 11.5 28.5 19.5C28.8 24 26.8 27.5 24 29C21.2 27.5 19.2 24 19.5 19.5C20 11.5 24 6 24 6Z" fill="#181e1a" stroke="#d4af37" stroke-width="1.8"/>
+        <line x1="24" y1="7" x2="24" y2="28" stroke="#ffffff" stroke-width="1.2" opacity="0.75"/>
+        <circle cx="24" cy="29" r="2" fill="#ffd166"/>
+      </svg>
+      <div class="loader-brand-title">FERRUM &amp; STONE</div>
+      <div class="loader-brand-sub">Artisan Cutlery Workshop</div>
+      <div class="loader-bar-wrap"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Shared Header / Navbar -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <nav class="navbar-container" aria-label="Main Navigation">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Ferrum and Stone - Home">
+          <div class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6"/>
+              <circle cx="24" cy="24" r="19" stroke="currentColor" stroke-width="1.25"/>
+              <path d="M13 31.5L24 37L35 31.5L24 26L13 31.5Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M13 31.5V34.5L24 40V37L13 31.5Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1"/>
+              <path d="M35 31.5V34.5L24 40V37L35 31.5Z" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-width="1"/>
+              <path d="M24 6C24 6 28 11.5 28.5 19.5C28.8 24 26.8 27.5 24 29C21.2 27.5 19.2 24 19.5 19.5C20 11.5 24 6 24 6Z" fill="var(--bg-surface)" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <line x1="24" y1="7" x2="24" y2="28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M21 11H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="24" cy="29" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Ferrum &amp; Stone</span>
+            <span class="brand-tagline">Artisan Cutlery Workshop</span>
+          </div>
+        </a>
+
+        <!-- Centered Navigation -->
+        <div class="nav-center-wrapper">
+          <ul class="nav-links">
+            <li class="nav-dropdown" id="homeDropdown">
+              <button type="button" class="dropdown-trigger active" aria-expanded="false" aria-haspopup="true" aria-controls="homeMenu">
+                <span>Home</span>
+                <svg class="chevron-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="homeMenu" role="menu">
+                <a href="index.html" class="dropdown-item" role="menuitem">Home 1 — Workshop</a>
+                <a href="home-2.html" class="dropdown-item" role="menuitem">Home 2 — Culinary Edition</a>
+              </div>
+            </li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing Guide</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Header Actions: Theme & Direction Toggles + CTA -->
+        <div class="header-actions">
+          <button type="button" class="btn-icon theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <button type="button" class="btn-icon dir-toggle-btn" aria-label="Toggle text direction LTR/RTL" title="Toggle RTL">
+            <span class="dir-label">RTL</span>
+          </button>
+
+          <a href="contact.html#book" class="btn btn-primary btn-sm btn-book">Book a Sharpening</a>
+
+          <!-- Hamburger Button (Mobile / Tablet / iPad) -->
+          <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <span class="hamburger-icon" aria-hidden="true">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-text">
+        <span class="brand-name">Ferrum &amp; Stone</span>
+        <span class="brand-tagline">Artisan Cutlery</span>
+      </div>
+      <button type="button" class="mobile-nav-close" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-list">
+      <div class="mobile-dropdown" id="mobileHomeDropdown">
+        <button type="button" class="mobile-dropdown-header active" aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        <div class="mobile-sub-menu">
+          <a href="index.html" class="mobile-sub-link active">Home 1 — Workshop</a>
+          <a href="home-2.html" class="mobile-sub-link">Home 2 — Culinary Edition</a>
+        </div>
+      </div>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing Guide</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="contact.html#book" class="btn btn-primary" style="width: 100%;">Book a Sharpening</a>
+      <div class="mobile-toggles-row">
+        <div class="mobile-toggle-item">
+          <span>Theme:</span>
+          <button type="button" class="btn-icon theme-toggle-btn" aria-label="Toggle theme in drawer">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+        </div>
+        <div class="mobile-toggle-item">
+          <span>Direction:</span>
+          <button type="button" class="btn-icon dir-toggle-btn" aria-label="Toggle text direction in drawer">
+            <span class="dir-label">RTL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content: Exactly 6 Sections -->
+  <main id="mainContent">
+
+    <!-- =======================================================================
+         SECTION 1: FULL-SCREEN HERO
+         "The Precision Workshop" Style
+         ======================================================================= -->
+    <section class="h1-hero" id="heroHome1" aria-label="Workshop Introduction">
+      <div class="h1-hero-bg">
+        <img src="assets/images/h1_hero_sharpening.jpg" alt="Artisan craftsman hand-sharpening a chef knife on a wet Japanese waterstone" loading="eager">
+      </div>
+      <div class="h1-hero-overlay"></div>
+      
+      <div class="container">
+        <div class="h1-hero-content">
+          <span class="eyebrow" style="color: var(--color-copper);">Precision Cutlery Craftsmanship</span>
+          <h1>Bring Every Blade Back to Its Best.</h1>
+          <p class="text-lead">
+            Hand-sharpened on natural waterstones with calibrated bevel geometry. We repair chips, re-profile worn tips, and restore dull cutlery to razor-clean performance.
+          </p>
+          <div class="h1-hero-actions">
+            <a href="contact.html#book" class="btn btn-primary btn-lg">Book a Sharpening</a>
+            <a href="services.html" class="btn btn-secondary btn-lg">Explore Our Services &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: THE ART OF SHARPENING
+         Editorial Split Layout with Large Process Photograph
+         ======================================================================= -->
+    <section style="padding: clamp(3.5rem, 6vw, 6.5rem) 0; background-color: var(--bg-surface); border-bottom: 1px solid var(--border-light);" id="artOfSharpening" aria-label="The Art of Sharpening">
+      <div class="container">
+        
+        <div class="editorial-split">
+          
+          <!-- Large Process Photograph -->
+          <div class="editorial-img-frame">
+            <img src="assets/images/h1_process_editorial.jpg" alt="Artisan inspecting paper-thin edge test in workshop against natural light" loading="lazy">
+          </div>
+
+          <!-- Editorial Copy -->
+          <div>
+            <span class="eyebrow">The Art of Sharpening</span>
+            <h2>Precision, Edge Care, and True Metallurgy.</h2>
+            <p style="color: var(--text-body); font-size: 1.05rem; margin-bottom: var(--space-md);">
+              Mechanical grinders generate aggressive friction that can ruin steel temper. We hone strictly by hand on progressive waterstones, removing only the microscopic layer needed to establish a clean apex.
+            </p>
+            <p style="color: var(--text-muted); margin-bottom: var(--space-lg);">
+              Every blade receives individualized attention: bevel angles are measured to factory specifications, secondary micro-bevels add edge durability, and leather stropping eliminates microscopic burrs.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border-light); padding-top: var(--space-md);">
+              <div>
+                <strong style="color: var(--text-primary); display: block; font-size: 1.05rem;">Cold Honing</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Water-cooled slurry protects factory heat treatment.</span>
+              </div>
+              <div>
+                <strong style="color: var(--text-primary); display: block; font-size: 1.05rem;">Angle Integrity</strong>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Exact angle calibration for clean food separation.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: OUR SHARPENING SERVICES
+         Six service categories with unique images & strictly max 2 cards per row
+         ======================================================================= -->
+    <section style="padding: clamp(3.5rem, 6vw, 6.5rem) 0; background-color: var(--bg-primary); border-bottom: 1px solid var(--border-light);" id="sharpeningServices" aria-label="Our Sharpening Services">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="eyebrow">Dedicated Disciplines</span>
+          <h2>Our Sharpening Services.</h2>
+          <p class="text-lead">
+            Comprehensive edge maintenance tailored to your kitchen knife styles and repair needs.
+          </p>
+        </header>
+
+        <!-- RESPONSIVE GRID: Desktop 3 cards per row, iPad & iPad Pro max 2 cards, Mobile 1 card -->
+        <div class="services-grid">
+
+          <!-- Service 1: Chef Knives -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_service_chef.jpg" alt="Artisan forged carbon steel chef knife on dark wood board" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Core Service</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Double-Bevel</span>
+              </div>
+              <h3 class="feature-card-title">Chef Knives</h3>
+              <p class="feature-card-desc">
+                Full waterstone progression for German and French chef knives. We restore the continuous belly curvature and refine apex sharpness for effortless daily slicing.
+              </p>
+              <div class="feature-card-footer">
+                <a href="services.html" class="btn btn-secondary btn-sm">Learn More</a>
+                <a href="contact.html#book" class="btn btn-primary btn-sm">Book Service</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 2: Japanese-Style Knives -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_service_japanese.jpg" alt="Japanese Gyuto knife with wavy Damascus steel and wa-handle" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Specialist</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Single &amp; Double Bevel</span>
+              </div>
+              <h3 class="feature-card-title">Japanese-Style Knives</h3>
+              <p class="feature-card-desc">
+                Dedicated sharpening for Gyuto, Santoku, Nakiri, Yanagiba, and Deba blades. We preserve delicate high-carbon steels (Shirogami, Aogami, SG2) with kasumi finishes.
+              </p>
+              <div class="feature-card-footer">
+                <a href="services.html" class="btn btn-secondary btn-sm">Learn More</a>
+                <a href="contact.html#book" class="btn btn-primary btn-sm">Book Service</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 3: Serrated Knives -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_service_serrated.jpg" alt="Artisan serrated bread knife with individual sharpened scallops" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Precision Tooling</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Individual Scallops</span>
+              </div>
+              <h3 class="feature-card-title">Serrated Knives</h3>
+              <p class="feature-card-desc">
+                Hand-honing each individual scallop on bread and tomato slicers using ceramic slipstones and diamond files, preventing tearing and preserving tooth geometry.
+              </p>
+              <div class="feature-card-footer">
+                <a href="services.html" class="btn btn-secondary btn-sm">Learn More</a>
+                <a href="contact.html#book" class="btn btn-primary btn-sm">Book Service</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 4: Edge Repair -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_service_edgerepair.jpg" alt="Macro view of knife edge reprofiling on coarse Japanese waterstone" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Restoration</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Profile Reset</span>
+              </div>
+              <h3 class="feature-card-title">Edge Repair</h3>
+              <p class="feature-card-desc">
+                Correcting rolled edges, flat spots, blade waviness, and previous improper sharpening marks. We re-establish straight, uniform primary bevels from heel to tip.
+              </p>
+              <div class="feature-card-footer">
+                <a href="services.html" class="btn btn-secondary btn-sm">Learn More</a>
+                <a href="contact.html#book" class="btn btn-primary btn-sm">Book Service</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 5: Chip Repair -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_service_chiprepair.jpg" alt="Macro detail of restored bevel after chip grinding and polishing" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Damage Recovery</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Macro &amp; Micro Chips</span>
+              </div>
+              <h3 class="feature-card-title">Chip Repair</h3>
+              <p class="feature-card-desc">
+                Removing deep nicks and bone strikes by carefully grinding back the blade profile, retaining proper edge thinness and preventing future metal fatigue.
+              </p>
+              <div class="feature-card-footer">
+                <a href="services.html" class="btn btn-secondary btn-sm">Learn More</a>
+                <a href="contact.html#book" class="btn btn-primary btn-sm">Book Service</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Service 6: Handle Restoration -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_service_handlerestore.jpg" alt="Artisan craftsman restoring wooden knife handle with wax conditioner" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Cutlery Care</span>
+                <span style="font-size: 0.82rem; color: var(--text-muted);">Wood &amp; Composite</span>
+              </div>
+              <h3 class="feature-card-title">Handle Restoration</h3>
+              <p class="feature-card-desc">
+                Reconditioning dried, rough, or unsealed wooden handles using natural camellia oil and beeswax. We tighten loose rivets and sand out minor surface splintering.
+              </p>
+              <div class="feature-card-footer">
+                <a href="services.html" class="btn btn-secondary btn-sm">Learn More</a>
+                <a href="contact.html#book" class="btn btn-primary btn-sm">Book Service</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: KNIFE COLLECTION SHOWCASE
+         Eight distinct knife types showcase with unique images & max 2 cards per row
+         ======================================================================= -->
+    <section style="padding: clamp(3.5rem, 6vw, 6.5rem) 0; background-color: var(--bg-surface); border-bottom: 1px solid var(--border-light);" id="knifeCollection" aria-label="Knife Collection Showcase">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="eyebrow">Cutlery Anatomy &amp; Care</span>
+          <h2>Knife Types We Sharpen.</h2>
+          <p class="text-lead">
+            Every blade geometry requires dedicated waterstone angles to maximize cutting efficiency.
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <a href="services.html" class="btn btn-secondary">Explore All Services &rarr;</a>
+          </div>
+        </header>
+
+        <!-- RESPONSIVE GRID: Desktop 4 cards per row, iPad & iPad Pro max 2 cards, Mobile 1 card -->
+        <div class="collection-grid">
+
+          <!-- 1. Chef Knife -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_chef.jpg" alt="Classic Western Chef knife on workbench" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Multi-Purpose</span>
+              </div>
+              <h3 class="feature-card-title">Chef Knife</h3>
+              <p class="feature-card-desc">
+                The primary kitchen workhorse. Rocking cuts require a clean, continuous belly arc and a durable 18&deg;&ndash;20&deg; secondary bevel.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 3–6 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Santoku -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_santoku.jpg" alt="Japanese Santoku knife with subtle Damascus ripples" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Three Virtues</span>
+              </div>
+              <h3 class="feature-card-title">Santoku Knife</h3>
+              <p class="feature-card-desc">
+                Excels at straight push-cutting of meat, fish, and vegetables. Honed to a lean 12&deg;&ndash;15&deg; angle with a flatter profile toward the heel.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 3–6 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Paring Knife -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_paring_user.jpg" alt="Precision paring knives on wooden surface" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Precision Prep</span>
+              </div>
+              <h3 class="feature-card-title">Paring Knife</h3>
+              <p class="feature-card-desc">
+                Small, agile knife for in-hand peeling, trimming, and intricate garnish work. Requiring fine tip sharpening and nimble balance.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 4–6 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Bread Knife -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_bread_user.jpg" alt="Serrated bread knife beside sliced artisan loaf" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Scalloped Edge</span>
+              </div>
+              <h3 class="feature-card-title">Bread Knife</h3>
+              <p class="feature-card-desc">
+                Slices crusty bread and delicate pastries without crushing internal crumb. Each tooth is sharpened individually with slipstones.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 6–12 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Boning Knife -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_boning_user.png" alt="Curved boning and prep knife with wooden handle" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Butchery Tool</span>
+              </div>
+              <h3 class="feature-card-title">Boning Knife</h3>
+              <p class="feature-card-desc">
+                Narrow, flexible or semi-stiff blade for separating meat from bone and silverskin trimming. Requires high edge toughness.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 2–4 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Utility Knife -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_utility_user.png" alt="Utility knife with replaceable keen cutting blades" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-copper">Daily Utility</span>
+              </div>
+              <h3 class="feature-card-title">Utility Knife</h3>
+              <p class="feature-card-desc">
+                The bridge between chef and paring knives. Perfect for shallow board work, shallots, citrus, and everyday cutting tasks.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 3–5 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Cleaver -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_cleaver_user.jpg" alt="Heavy steel meat cleaver on wooden board" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Heavy Impact</span>
+              </div>
+              <h3 class="feature-card-title">Cleaver</h3>
+              <p class="feature-card-desc">
+                Substantial spine weight designed for chopping poultry or Chinese-style vegetable slicing. Sharpened with a robust convex edge.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening every 4–6 months</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Carving Knife -->
+          <article class="feature-card">
+            <div class="feature-card-media">
+              <img src="assets/images/h1_knife_carving_user.jpg" alt="Artisan woodcarving knives and chisel set on workbench" loading="lazy">
+            </div>
+            <div class="feature-card-content">
+              <div class="feature-card-header">
+                <span class="badge badge-forest">Slicing Tool</span>
+              </div>
+              <h3 class="feature-card-title">Carving Knife</h3>
+              <p class="feature-card-desc">
+                Long, slender blade that slices through cooked roasts and poultry in single, smooth strokes without sawing or shredding.
+              </p>
+              <div class="feature-card-footer">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Needs sharpening seasonal / on demand</span>
+                <a href="services.html" class="btn-ghost">Sharpening Details &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5: THE CRAFTSMANSHIP DIFFERENCE
+         Horizontal Editorial Layout
+         (Careful Inspection, Appropriate Methods, Transparent Estimates, Responsible Handling)
+         ======================================================================= -->
+    <section style="padding: clamp(3.5rem, 6vw, 6.5rem) 0; background-color: var(--bg-primary); border-bottom: 1px solid var(--border-light);" id="craftsmanshipDifference" aria-label="The Craftsmanship Difference">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="eyebrow">Workshop Discipline</span>
+          <h2>The Craftsmanship Difference.</h2>
+          <p class="text-lead">
+            We treat sharpening as metallurgical stewardship rather than high-speed commodity grinding.
+          </p>
+        </header>
+
+        <!-- Distinctive Horizontal 2x2 Pillars Grid -->
+        <div class="craft-pillars-grid">
+
+          <!-- Pillar 1: Careful Inspection -->
+          <div class="pillar-item">
+            <span class="pillar-num">01</span>
+            <h3 class="pillar-title">Careful Inspection</h3>
+            <p class="pillar-desc">
+              Before sharpening, we evaluate spine straightness, heel wear, edge chips, and steel hardness under direct task lighting.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Appropriate Sharpening Methods -->
+          <div class="pillar-item">
+            <span class="pillar-num">02</span>
+            <h3 class="pillar-title">Appropriate Sharpening Methods</h3>
+            <p class="pillar-desc">
+              Western blades, Japanese single-bevels, and serrated knives receive distinct stone progressions matched to their metallurgy.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Transparent Estimates -->
+          <div class="pillar-item">
+            <span class="pillar-num">03</span>
+            <h3 class="pillar-title">Transparent Estimates</h3>
+            <p class="pillar-desc">
+              All sharpening fees and necessary repair costs are clearly communicated before any stone touches your steel.
+            </p>
+          </div>
+
+          <!-- Pillar 4: Responsible Handling -->
+          <div class="pillar-item">
+            <span class="pillar-num">04</span>
+            <h3 class="pillar-title">Responsible Handling</h3>
+            <p class="pillar-desc">
+              Knives remain housed in protective guards, safely stored on designated benches, and handed back ready for immediate culinary use.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 6: FINAL BOOKING CTA
+         Dark Premium Panel with Strong Closing Image
+         ======================================================================= -->
+    <section style="padding: clamp(3.5rem, 6vw, 6.5rem) 0; background-color: var(--bg-surface);" id="finalBookingCTA" aria-label="Book a Sharpening">
+      <div class="container">
+        
+        <div class="closing-cta-panel">
+          <div class="closing-cta-bg">
+            <img src="assets/images/h1_cta_bg_user.png" alt="Culinary knife cutting vegetables and chef steel honing rod" loading="lazy">
+          </div>
+          
+          <div class="closing-cta-content">
+            <span class="eyebrow" style="color: var(--color-copper); margin-bottom: 0.75rem;">Workshop Intake</span>
+            <h2>Give Your Knives the Edge They Deserve.</h2>
+            <p>
+              Experience the pleasure and safety of razor-sharp kitchen cutlery. Book your sharpening slot or visit our drop-off location.
+            </p>
+            <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1.25rem;">
+              <a href="contact.html#book" class="btn btn-primary btn-lg">Book a Sharpening</a>
+              <a href="contact.html" class="btn btn-secondary btn-lg">View Drop-off Details &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6"/>
+                <circle cx="24" cy="24" r="19" stroke="currentColor" stroke-width="1.25"/>
+                <path d="M13 31.5L24 37L35 31.5L24 26L13 31.5Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M13 31.5V34.5L24 40V37L13 31.5Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                <path d="M35 31.5V34.5L24 40V37L35 31.5Z" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-width="1"/>
+                <path d="M24 6C24 6 28 11.5 28.5 19.5C28.8 24 26.8 27.5 24 29C21.2 27.5 19.2 24 19.5 19.5C20 11.5 24 6 24 6Z" fill="var(--bg-surface)" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <line x1="24" y1="7" x2="24" y2="28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M21 11H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="24" cy="29" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Ferrum &amp; Stone</span>
+              <span class="brand-tagline">Artisan Cutlery Workshop</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Preserving culinary heritage through uncompromising hand-whetstone sharpening, blade repair, and metallurgical respect.
+          </p>
+          <div class="footer-craft-badge">
+            <span>&#9874; Hand Honed &bull; Zero Belt Heat</span>
+          </div>
+
+          <div class="footer-social-links" aria-label="Workshop social media channels">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://x.com" class="footer-social-icon" aria-label="X (formerly Twitter)" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Workshop</a></li>
+            <li><a href="home-2.html">Home 2 — Culinary</a></li>
+            <li><a href="services.html">Services &amp; Restoration</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="about.html">About the Workshop</a></li>
+            <li><a href="contact.html">Contact &amp; Drop-off</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Craft Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Chef Knives</a></li>
+            <li><a href="services.html">Japanese Waterstone Honing</a></li>
+            <li><a href="services.html">Serrated Knife Sharpening</a></li>
+            <li><a href="services.html">Edge &amp; Chip Repair</a></li>
+            <li><a href="services.html">Handle Restoration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Workshop Intake</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
+            Drop off your knives securely or book bench time online.
+          </p>
+          <a href="contact.html#book" class="btn btn-primary btn-sm">Book a Sharpening</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ferrum &amp; Stone Cutlery Service. All rights reserved.</p>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="contact.html">Drop-off Instructions</a>
+          <a href="pricing.html">Pricing Guide</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

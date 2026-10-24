@@ -1,0 +1,674 @@
+/* ==========================================================================
+   FERRUM & STONE — ARTISAN CUTLERY & KNIFE SHARPENING
+   Phase 1 Design System & Foundational Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Google Fonts Import: DM Serif Display & DM Sans (Only 2 Font Families)
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap');
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties & Color Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Core Palette */
+  --color-charcoal: #202321;
+  --color-warm-ivory: #F7F4ED;
+  --color-steel-grey: #A7ADB0;
+  --color-copper: #C87545;
+  --color-copper-hover: #b46335;
+  --color-copper-glow: rgba(200, 117, 69, 0.25);
+  --color-forest-green: #35483D;
+  --color-forest-green-hover: #29382f;
+  --color-white: #FFFFFF;
+  --color-body-text: #353A37;
+
+  /* Typography */
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Light Theme (Default) */
+  --bg-primary: #F7F4ED;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F0ECE3;
+  --bg-accent-subtle: #EBE5D9;
+  --bg-contrast: #202321;
+  --text-contrast: #F7F4ED;
+
+  --text-primary: #202321;
+  --text-body: #353A37;
+  --text-muted: #676E6A;
+  --text-light: #8E9692;
+
+  --border-light: #E3DED4;
+  --border-subtle: #ECE8E0;
+  --border-strong: #A7ADB0;
+
+  --shadow-sm: 0 1px 3px rgba(32, 35, 33, 0.05);
+  --shadow-md: 0 4px 16px rgba(32, 35, 33, 0.07);
+  --shadow-lg: 0 12px 32px rgba(32, 35, 33, 0.1);
+  --shadow-focus: 0 0 0 3px rgba(200, 117, 69, 0.35);
+
+  --navbar-bg: rgba(247, 244, 237, 0.94);
+  --navbar-border: rgba(32, 35, 33, 0.08);
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4.5rem;   /* 72px */
+  --space-4xl: 6rem;     /* 96px */
+
+  /* Border Radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Container Widths */
+  --container-max: 1320px;
+  --container-narrow: 940px;
+  --page-intro-min-height: 380px;
+}
+
+/* --------------------------------------------------------------------------
+   Dark Theme Overrides
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  --bg-primary: #151816;
+  --bg-surface: #202321;
+  --bg-surface-elevated: #282C29;
+  --bg-accent-subtle: #2F3430;
+  --bg-contrast: #F7F4ED;
+  --text-contrast: #202321;
+
+  --text-primary: #F7F4ED;
+  --text-body: #D4DDD7;
+  --text-muted: #A7ADB0;
+  --text-light: #7E8582;
+
+  --border-light: #2E3330;
+  --border-subtle: #252A27;
+  --border-strong: #49514D;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 18px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.6);
+  --shadow-focus: 0 0 0 3px rgba(217, 133, 83, 0.45);
+
+  --navbar-bg: rgba(21, 24, 22, 0.94);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+
+  --color-copper: #D98553;
+  --color-copper-hover: #E39567;
+  --color-forest-green: #486353;
+  --color-forest-green-hover: #587966;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Baseline
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-body);
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+img, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Accessible Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Typography Hierarchy
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw + 1rem, 4.4rem);
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw + 0.8rem, 3rem);
+  line-height: 1.18;
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2vw + 0.5rem, 1.95rem);
+  line-height: 1.25;
+  margin-bottom: var(--space-sm);
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin-bottom: var(--space-xs);
+}
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-lead {
+  font-size: clamp(1.1rem, 1.2vw + 0.8rem, 1.35rem);
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  max-width: fit-content;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-copper);
+  margin-bottom: var(--space-sm);
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1.5px;
+  background-color: var(--color-copper);
+}
+
+[dir="rtl"] .eyebrow::before {
+  /* In RTL, before pseudo element automatically appears on the right */
+}
+
+/* --------------------------------------------------------------------------
+   Layout Containers
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2.5rem);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons & Interactive Elements
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.8rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  user-select: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-copper);
+  color: var(--color-white);
+  border-color: var(--color-copper);
+  box-shadow: 0 2px 8px var(--color-copper-glow);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-copper-hover);
+  border-color: var(--color-copper-hover);
+  color: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--text-primary);
+}
+
+.btn-dark {
+  background-color: var(--color-charcoal);
+  color: var(--color-warm-ivory);
+  border-color: var(--color-charcoal);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-forest-green);
+  border-color: var(--color-forest-green);
+  color: var(--color-white);
+}
+
+.btn-forest {
+  background-color: var(--color-forest-green);
+  color: var(--color-white);
+  border-color: var(--color-forest-green);
+}
+
+.btn-forest:hover {
+  background-color: var(--color-forest-green-hover);
+  border-color: var(--color-forest-green-hover);
+  color: var(--color-white);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-copper);
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+}
+
+.btn-ghost:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.88rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* Icon button for theme / RTL switches */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-surface);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.btn-icon:hover {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--color-copper);
+  color: var(--color-copper);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE CARD GRID SYSTEM:
+   - Mobile (< 640px): 1 card per row
+   - iPad & iPad Pro (640px - 1024px): Max 2 cards per row
+   - Desktop (>= 1025px): 3 or 4 cards per row for rich product showcase
+   -------------------------------------------------------------------------- */
+.card-grid,
+.two-card-row,
+.card-grid-2,
+.card-grid-3,
+.card-grid-4,
+.services-grid,
+.collection-grid,
+.journey-grid,
+.repair-grid,
+.specialist-grid,
+.craft-pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE CARD GRID BREAKPOINTS:
+   1. Mobile (< 640px): 1 card per row
+   2. iPad & iPad Pro (640px - 1200px): STRICTLY MAX 2 CARDS PER ROW
+   3. Large Desktop (> 1200px): 3 or 4 cards per row
+   -------------------------------------------------------------------------- */
+
+/* Tablet, iPad & iPad Pro (640px to 1200px): Strictly Max 2 Cards Per Row */
+@media (min-width: 640px) and (max-width: 1200px) {
+  .card-grid,
+  .card-grid-2,
+  .card-grid-3,
+  .card-grid-4,
+  .services-grid,
+  .collection-grid,
+  .journey-grid,
+  .repair-grid,
+  .specialist-grid,
+  .craft-pillars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Large Desktop (> 1200px): 2-Card Sections */
+@media (min-width: 1201px) {
+  .card-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Large Desktop (> 1200px): 3 Cards Per Row (Ideal for 3 or 6 items) */
+@media (min-width: 1201px) {
+  .card-grid-3,
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Large Desktop (> 1200px): 4 Cards Per Row (Ideal for 4 or 8 items) */
+@media (min-width: 1201px) {
+  .card-grid,
+  .card-grid-4,
+  .collection-grid,
+  .journey-grid,
+  .repair-grid,
+  .specialist-grid,
+  .craft-pillars-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Reusable Artisan Card Style with Perfect Alignment */
+.card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform var(--transition-normal), border-color var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--color-copper);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  margin-bottom: var(--space-md);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 1.8vw, 1.7rem);
+  margin-bottom: 0.4rem;
+  color: var(--text-primary);
+}
+
+.card-subtitle {
+  font-size: 0.88rem;
+  color: var(--color-copper);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  color: var(--text-body);
+  margin-bottom: var(--space-lg);
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* --------------------------------------------------------------------------
+   SECTION HEIGHT RULES:
+   1. Home 1 and Home 2 hero: full viewport height (100vh / 100dvh)
+   2. Services, Pricing Guide, and Contact first section:
+      Exact same height, top spacing, and consistent responsive behavior.
+   -------------------------------------------------------------------------- */
+.hero-full-viewport {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 84px; /* clearance for fixed navbar */
+  padding-bottom: var(--space-3xl);
+  box-sizing: border-box;
+}
+
+.page-intro {
+  min-height: var(--page-intro-min-height);
+  padding-top: calc(84px + var(--space-2xl));
+  padding-bottom: var(--space-2xl);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-light);
+  box-sizing: border-box;
+}
+
+.page-intro-content {
+  width: 100%;
+}
+
+.page-intro h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.page-intro .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.breadcrumbs a {
+  color: var(--text-muted);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-copper);
+}
+
+.breadcrumbs .separator {
+  color: var(--color-steel-grey);
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--color-copper);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Direction / RTL Styling Rules
+   -------------------------------------------------------------------------- */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .arrow-icon,
+[dir="rtl"] .icon-flip-rtl {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes & Badges
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content !important;
+  max-width: fit-content !important;
+  align-self: flex-start !important;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.badge-copper {
+  background-color: rgba(200, 117, 69, 0.12);
+  color: var(--color-copper);
+  border-color: rgba(200, 117, 69, 0.3);
+}
+
+.badge-forest {
+  background-color: rgba(53, 72, 61, 0.12);
+  color: var(--color-forest-green);
+  border-color: rgba(53, 72, 61, 0.3);
+}
+
+[data-theme="dark"] .badge-forest {
+  background-color: rgba(72, 99, 83, 0.2);
+  color: #8bb39c;
+  border-color: rgba(72, 99, 83, 0.4);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Smooth motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

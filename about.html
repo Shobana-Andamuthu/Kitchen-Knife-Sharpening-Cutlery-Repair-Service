@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Our Workshop &amp; Craft Philosophy | Ferrum &amp; Stone</title>
+  <meta name="description" content="Discover the artisan knife sharpening philosophy of Ferrum &amp; Stone: traditional Japanese waterstones, zero heat damage, and anatomical cutlery repair.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div id="pageLoader" class="page-loader" aria-hidden="true">
+    <div class="loader-content">
+      <svg class="loader-emblem" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#c06038" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6"/>
+        <circle cx="24" cy="24" r="19" stroke="#c06038" stroke-width="1.25"/>
+        <path d="M13 31.5L24 37L35 31.5L24 26L13 31.5Z" fill="#c06038" fill-opacity="0.25" stroke="#c06038" stroke-width="1.2"/>
+        <path d="M24 6C24 6 28 11.5 28.5 19.5C28.8 24 26.8 27.5 24 29C21.2 27.5 19.2 24 19.5 19.5C20 11.5 24 6 24 6Z" fill="#181e1a" stroke="#d4af37" stroke-width="1.8"/>
+        <line x1="24" y1="7" x2="24" y2="28" stroke="#ffffff" stroke-width="1.2" opacity="0.75"/>
+        <circle cx="24" cy="29" r="2" fill="#ffd166"/>
+      </svg>
+      <div class="loader-brand-title">FERRUM &amp; STONE</div>
+      <div class="loader-brand-sub">Artisan Cutlery Workshop</div>
+      <div class="loader-bar-wrap"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Shared Header / Navbar -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <nav class="navbar-container" aria-label="Main Navigation">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Ferrum and Stone - Home">
+          <div class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6"/>
+              <circle cx="24" cy="24" r="19" stroke="currentColor" stroke-width="1.25"/>
+              <path d="M13 31.5L24 37L35 31.5L24 26L13 31.5Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+              <path d="M13 31.5V34.5L24 40V37L13 31.5Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1"/>
+              <path d="M35 31.5V34.5L24 40V37L35 31.5Z" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-width="1"/>
+              <path d="M24 6C24 6 28 11.5 28.5 19.5C28.8 24 26.8 27.5 24 29C21.2 27.5 19.2 24 19.5 19.5C20 11.5 24 6 24 6Z" fill="var(--bg-surface)" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <line x1="24" y1="7" x2="24" y2="28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M21 11H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="24" cy="29" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Ferrum &amp; Stone</span>
+            <span class="brand-tagline">Artisan Cutlery Workshop</span>
+          </div>
+        </a>
+
+        <!-- Centered Navigation: About placed right next to Pricing Guide -->
+        <div class="nav-center-wrapper">
+          <ul class="nav-links">
+            <li class="nav-dropdown" id="homeDropdown">
+              <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="homeMenu">
+                <span>Home</span>
+                <svg class="chevron-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="homeMenu" role="menu">
+                <a href="index.html" class="dropdown-item" role="menuitem">Home 1 — Workshop</a>
+                <a href="home-2.html" class="dropdown-item" role="menuitem">Home 2 — Culinary Edition</a>
+              </div>
+            </li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing Guide</a></li>
+            <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Header Actions: Theme & Direction Toggles + CTA -->
+        <div class="header-actions">
+          <button type="button" class="btn-icon theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle Theme">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: none;">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <button type="button" class="btn-icon dir-toggle-btn" aria-label="Toggle text direction LTR/RTL" title="Toggle RTL">
+            <span class="dir-label">RTL</span>
+          </button>
+
+          <a href="contact.html#book" class="btn btn-primary btn-sm btn-book">Book a Sharpening</a>
+
+          <!-- Hamburger Button (Mobile / Tablet / iPad) -->
+          <button type="button" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+            <span class="hamburger-icon" aria-hidden="true">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <div class="brand-text">
+        <span class="brand-name">Ferrum &amp; Stone</span>
+        <span class="brand-tagline">Artisan Cutlery</span>
+      </div>
+      <button type="button" class="mobile-nav-close" aria-label="Close navigation menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mobile-nav-list">
+      <div class="mobile-dropdown">
+        <button type="button" class="mobile-dropdown-header" aria-expanded="false">
+          <span>Home</span>
+          <svg class="chevron-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        <div class="mobile-sub-menu">
+          <a href="index.html" class="mobile-sub-link">Home 1 — Workshop</a>
+          <a href="home-2.html" class="mobile-sub-link">Home 2 — Culinary Edition</a>
+        </div>
+      </div>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="pricing.html" class="mobile-nav-link">Pricing Guide</a>
+      <a href="about.html" class="mobile-nav-link active" aria-current="page">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <a href="contact.html#book" class="btn btn-primary" style="width: 100%;">Book a Sharpening</a>
+      <div class="mobile-toggles-row">
+        <div class="mobile-toggle-item">
+          <span>Theme:</span>
+          <button type="button" class="btn-icon theme-toggle-btn" aria-label="Toggle theme in drawer">
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+        </div>
+        <div class="mobile-toggle-item">
+          <span>Direction:</span>
+          <button type="button" class="btn-icon dir-toggle-btn" aria-label="Toggle text direction in drawer">
+            <span class="dir-label">RTL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content: Distinct About Layout -->
+  <main id="mainContent">
+
+    <!-- =======================================================================
+         SECTION 1 — PAGE INTRO
+         Shared non-home intro component matching Services, Pricing, and Contact
+         ======================================================================= -->
+    <section class="page-intro" id="aboutIntro" aria-label="About Introduction">
+      <div class="container">
+        <div class="page-intro-inner">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator" aria-hidden="true">&rsaquo;</span>
+            <span aria-current="page">About</span>
+          </nav>
+          <div class="page-intro-meta">
+            <span class="badge badge-copper">Workshop Heritage</span>
+            <span style="font-size: 0.88rem; color: var(--text-muted);">Metallurgical Respect &bull; Hand Honed</span>
+          </div>
+          <h1>The Art of the True Apex</h1>
+          <p class="page-intro-desc">
+            A knife is an extension of the cook's hand. Ferrum &amp; Stone was founded to preserve culinary blades through traditional Japanese waterstones, disciplined geometry, and zero heat damage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2 — THE WORKSHOP MANIFESTO (Asymmetrical Split Layout)
+         ======================================================================= -->
+    <section class="about-section about-section--surface" id="manifesto">
+      <div class="container">
+        
+        <div class="about-manifesto-grid">
+          
+          <!-- Image Frame with Overlay Badge -->
+          <div class="about-media-frame">
+            <img src="assets/images/h1_process_editorial.jpg" alt="Master cutler honing a chef knife over a wet sharpening stone" loading="lazy">
+            <div class="about-badge-overlay">
+              <span class="about-badge-dot" aria-hidden="true"></span>
+              <span>100% Waterstone &bull; Zero Belt Friction</span>
+            </div>
+          </div>
+
+          <!-- Manifesto Copy -->
+          <div>
+            <span class="eyebrow">Our Guiding Principle</span>
+            <h2 style="margin-bottom: 1rem;">Why High-Speed Grinders Ruin Good Knives</h2>
+            <p style="font-size: 1rem; color: var(--text-body); line-height: 1.65; margin-bottom: 1rem;">
+              Industrial sharpening services often rely on dry motorized belt grinders. In seconds, friction temperatures at the fragile cutting apex spike beyond 400&deg;F, destroying the factory heat-treat temper and leaving the steel soft.
+            </p>
+
+            <blockquote class="about-quote-box">
+              &ldquo;Once steel loses its temper at the apex, it will roll after a single prep shift. We hone slowly on waterstones where cool water carries away heat and debris simultaneously.&rdquo;
+            </blockquote>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+              By sharpening exclusively by hand, we preserve the microscopic carbide structure of carbon steel and high-end stainless, ensuring an edge that bites cleanly and lasts months between touch-ups.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3 — CORE BENCH DISCIPLINES (Artisan Blueprint Console)
+         ======================================================================= -->
+    <section class="about-section" id="disciplines">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="eyebrow">Artisan Standards</span>
+          <h2>Our Four Bench Disciplines</h2>
+          <p class="text-lead">
+            Every blade passing across our workbench is treated with metallurgical precision.
+          </p>
+        </header>
+
+        <!-- Blueprint Console Layout: Max 2 cards per row on iPad/iPad Pro, 2 per row desktop -->
+        <div class="disciplines-blueprint-grid">
+
+          <!-- Discipline 1: Geometry -->
+          <article class="discipline-console-card">
+            <div>
+              <div class="discipline-console-top">
+                <span class="discipline-num-pill">DISCIPLINE 01</span>
+                <span class="discipline-spec-pill">Curvature Integrity</span>
+              </div>
+              <h3 class="discipline-console-title">Anatomical Edge Geometry</h3>
+              <p class="discipline-console-desc">
+                We reset apex angles strictly matched to the steel and blade use: 12&deg; for delicate Kataba slicers, 15&deg; for Japanese Santoku, and 18&deg;&ndash;20&deg; for heavy European chef knives. We never flatten out a curved rocking belly.
+              </p>
+            </div>
+            <div class="discipline-blueprint-specs">
+              <span>Primary Apex: <strong>12&deg; &ndash; 20&deg;</strong></span>
+              <span>Tolerance: <strong>&plusmn;0.5&deg;</strong></span>
+            </div>
+          </article>
+
+          <!-- Discipline 2: Slurry & Stones -->
+          <article class="discipline-console-card">
+            <div>
+              <div class="discipline-console-top">
+                <span class="discipline-num-pill">DISCIPLINE 02</span>
+                <span class="discipline-spec-pill">Slurry Dynamics</span>
+              </div>
+              <h3 class="discipline-console-title">Whetstone Progression</h3>
+              <p class="discipline-console-desc">
+                From 400-grit coarse shaping stones through 2000-grit refining to 8000-grit polishing stones, we manage stone slurry to achieve an acute apex without gouging the blade flanks.
+              </p>
+            </div>
+            <div class="discipline-blueprint-specs">
+              <span>Progression: <strong>400# &rarr; 8000#</strong></span>
+              <span>Lubricant: <strong>Filtered Spring Water</strong></span>
+            </div>
+          </article>
+
+          <!-- Discipline 3: Deburring Strops -->
+          <article class="discipline-console-card">
+            <div>
+              <div class="discipline-console-top">
+                <span class="discipline-num-pill">DISCIPLINE 03</span>
+                <span class="discipline-spec-pill">Apex Cleanliness</span>
+              </div>
+              <h3 class="discipline-console-title">Micro-Burr Elimination</h3>
+              <p class="discipline-console-desc">
+                A sharp edge that still carries a microscopic wire burr will dull instantly. We remove burrs completely using progressive edge-leading waterstone passes and unconditioned leather strops.
+              </p>
+            </div>
+            <div class="discipline-blueprint-specs">
+              <span>Burr Detection: <strong>10x Loupe Optics</strong></span>
+              <span>Substrate: <strong>Russian Bridle Leather</strong></span>
+            </div>
+          </article>
+
+          <!-- Discipline 4: Timber Preservation -->
+          <article class="discipline-console-card">
+            <div>
+              <div class="discipline-console-top">
+                <span class="discipline-num-pill">DISCIPLINE 04</span>
+                <span class="discipline-spec-pill">Organic Care</span>
+              </div>
+              <h3 class="discipline-console-title">Timber &amp; Handle Stabilization</h3>
+              <p class="discipline-console-desc">
+                Cutlery care extends beyond the blade. We re-tighten loose brass pins, buff bolsters, and seal dried wooden scales using non-toxic food-safe organic beeswax and pure camellia oil.
+              </p>
+            </div>
+            <div class="discipline-blueprint-specs">
+              <span>Sealant: <strong>Pure Camellia Oil</strong></span>
+              <span>Food Safe: <strong>100% Organic Grade</strong></span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4 — TRADITIONAL WATERSTONE HIERARCHY (Tactile Waterstone Bench)
+         ======================================================================= -->
+    <section class="about-section about-section--surface" id="stoneHierarchy">
+      <div class="container">
+        
+        <header class="section-header">
+          <span class="eyebrow">The Science of Abrasives</span>
+          <h2>The Japanese Waterstone Hierarchy</h2>
+          <p class="text-lead">
+            Understanding the progression of natural and synthetic stones used at our workbench.
+          </p>
+        </header>
+
+        <!-- Tactile Waterstone Bench Grid: Max 2 cards on iPad/iPad Pro, 4 cards on Large Desktop -->
+        <div class="waterstone-bench-grid">
+          
+          <!-- Stage 1 -->
+          <article class="whetstone-block-card">
+            <div class="whetstone-stone-visual stone-theme-arato">
+              <span>荒砥 Arato</span>
+              <span>220&ndash;600#</span>
+            </div>
+            <div class="whetstone-block-body">
+              <div>
+                <h3 class="whetstone-block-title">Arato (Coarse Shaping)</h3>
+                <p class="whetstone-block-desc">
+                  Used strictly for rapid stock removal, repairing deep chips, straightening bent tips, and wide-bevel thinning without thermal shock.
+                </p>
+              </div>
+              <div class="whetstone-block-metrics">
+                <span>Application</span>
+                <span class="whetstone-metric-tag">Reprofiling &bull; Stock Removal</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 2 -->
+          <article class="whetstone-block-card">
+            <div class="whetstone-stone-visual stone-theme-nakato">
+              <span>中砥 Nakato</span>
+              <span>1000&ndash;2000#</span>
+            </div>
+            <div class="whetstone-block-body">
+              <div>
+                <h3 class="whetstone-block-title">Nakato (Medium Refining)</h3>
+                <p class="whetstone-block-desc">
+                  Sets the primary cutting bevel, removes coarse scratches, and establishes the foundational apex bite and tooth required for culinary slicing.
+                </p>
+              </div>
+              <div class="whetstone-block-metrics">
+                <span>Application</span>
+                <span class="whetstone-metric-tag">Foundational Cutting Bevel</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 3 -->
+          <article class="whetstone-block-card">
+            <div class="whetstone-stone-visual stone-theme-shiageto">
+              <span>仕上砥 Shiageto</span>
+              <span>4000&ndash;8000#</span>
+            </div>
+            <div class="whetstone-block-body">
+              <div>
+                <h3 class="whetstone-block-title">Shiageto (Finishing &amp; Polish)</h3>
+                <p class="whetstone-block-desc">
+                  Polishes the bevel to a mirror sheen, aligns micro-teeth, and produces a surgical hair-shaving edge for delicate proteins and sushi.
+                </p>
+              </div>
+              <div class="whetstone-block-metrics">
+                <span>Application</span>
+                <span class="whetstone-metric-tag">Mirror Apex &bull; Surgical Edge</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stage 4 -->
+          <article class="whetstone-block-card">
+            <div class="whetstone-stone-visual stone-theme-awasedo">
+              <span>合砥 Awasedo</span>
+              <span>Natural Strop</span>
+            </div>
+            <div class="whetstone-block-body">
+              <div>
+                <h3 class="whetstone-block-title">Awasedo &amp; Leather Strop</h3>
+                <p class="whetstone-block-desc">
+                  Final deburring pass on natural horsehide charged with fine sub-micron diamond emulsion for frictionless, drag-free cutting glide.
+                </p>
+              </div>
+              <div class="whetstone-block-metrics">
+                <span>Application</span>
+                <span class="whetstone-metric-tag">Micro-Burr Removal &bull; Glide</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5 — STANDARDS OF CUSTODY (Split Workshop Visual)
+         ======================================================================= -->
+    <section class="about-section" id="standards">
+      <div class="container">
+        
+        <div class="about-manifesto-grid">
+          
+          <div>
+            <span class="eyebrow">Responsible Care</span>
+            <h2 style="margin-bottom: 1rem;">Our Custody &amp; Craft Promises</h2>
+            <p style="font-size: 1rem; color: var(--text-body); line-height: 1.65; margin-bottom: 1.25rem;">
+              When you entrust your culinary tools to Ferrum &amp; Stone, they receive master-level care from arrival to collection:
+            </p>
+
+            <ul class="contact-info-list" style="margin-top: 0;">
+              <li class="contact-info-item">
+                <span style="color: var(--color-copper); font-weight: bold; font-size: 1.1rem;">&#10003;</span>
+                <div style="font-size: 0.93rem; color: var(--text-body); line-height: 1.55;">
+                  <strong>Individual Bench Inspection:</strong> Every knife is measured under magnification to assess edge angle, thickness behind the edge, and straightness before stones touch the steel.
+                </div>
+              </li>
+
+              <li class="contact-info-item">
+                <span style="color: var(--color-copper); font-weight: bold; font-size: 1.1rem;">&#10003;</span>
+                <div style="font-size: 0.93rem; color: var(--text-body); line-height: 1.55;">
+                  <strong>Written Estimate Confirmation:</strong> We never perform structural chip repair, tip reshaping, or thinning without prior client approval.
+                </div>
+              </li>
+
+              <li class="contact-info-item">
+                <span style="color: var(--color-copper); font-weight: bold; font-size: 1.1rem;">&#10003;</span>
+                <div style="font-size: 0.93rem; color: var(--text-body); line-height: 1.55;">
+                  <strong>Sanitized Return Packaging:</strong> Finished cutlery is returned with clean protective edge sleeves to guarantee safe transit home.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-media-frame">
+            <img src="assets/images/h2_knives_care.jpg" alt="Collection of polished artisan kitchen knives resting safely on workbench" loading="lazy">
+            <div class="about-badge-overlay">
+              <span class="about-badge-dot" aria-hidden="true"></span>
+              <span>Sanitized Custody Packaging</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 6 — CLOSING CONSULTATION & CTA BANNER
+         ======================================================================= -->
+    <section class="about-section about-section--elevated" id="aboutCta">
+      <div class="container">
+        
+        <div class="final-booking-banner">
+          <div class="final-booking-content">
+            <span class="badge badge-copper" style="margin-bottom: 1rem;">Experience the Difference</span>
+            <h2>Ready to Restore Your Kitchen Knives?</h2>
+            <p>
+              Whether you cook professionally or love preparing meals at home, razor-sharp cutlery transforms cooking into an effortless pleasure.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="pricing.html" class="btn btn-secondary">Review Pricing Guide &rarr;</a>
+              <a href="contact.html#book" class="btn btn-primary">Book an Intake Consultation &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.6"/>
+                <circle cx="24" cy="24" r="19" stroke="currentColor" stroke-width="1.25"/>
+                <path d="M13 31.5L24 37L35 31.5L24 26L13 31.5Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+                <path d="M13 31.5V34.5L24 40V37L13 31.5Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="1"/>
+                <path d="M35 31.5V34.5L24 40V37L35 31.5Z" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-width="1"/>
+                <path d="M24 6C24 6 28 11.5 28.5 19.5C28.8 24 26.8 27.5 24 29C21.2 27.5 19.2 24 19.5 19.5C20 11.5 24 6 24 6Z" fill="var(--bg-surface)" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <line x1="24" y1="7" x2="24" y2="28" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M21 11H27" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="24" cy="29" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Ferrum &amp; Stone</span>
+              <span class="brand-tagline">Artisan Cutlery Workshop</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Preserving culinary heritage through uncompromising hand-whetstone sharpening, blade repair, and metallurgical respect.
+          </p>
+          <div class="footer-craft-badge">
+            <span>&#9874; Hand Honed &bull; Zero Belt Heat</span>
+          </div>
+
+          <div class="footer-social-links" aria-label="Workshop social media channels">
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="https://x.com" class="footer-social-icon" aria-label="X (formerly Twitter)" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1 — Workshop</a></li>
+            <li><a href="home-2.html">Home 2 — Culinary</a></li>
+            <li><a href="services.html">Services &amp; Restoration</a></li>
+            <li><a href="pricing.html">Pricing Guide</a></li>
+            <li><a href="about.html">About the Workshop</a></li>
+            <li><a href="contact.html">Contact &amp; Drop-off</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Craft Disciplines</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Chef Knives</a></li>
+            <li><a href="services.html">Japanese Waterstone Honing</a></li>
+            <li><a href="services.html">Serrated Knife Sharpening</a></li>
+            <li><a href="services.html">Edge &amp; Chip Repair</a></li>
+            <li><a href="services.html">Handle Restoration</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Workshop Intake</h4>
+          <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
+            Drop off your knives securely or book bench time online.
+          </p>
+          <a href="contact.html#book" class="btn btn-primary btn-sm">Book a Sharpening</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ferrum &amp; Stone Cutlery Service. All rights reserved.</p>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="contact.html">Drop-off Instructions</a>
+          <a href="pricing.html">Pricing Guide</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
