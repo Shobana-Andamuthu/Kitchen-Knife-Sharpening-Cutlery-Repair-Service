@@ -3174,7 +3174,12 @@ section header .text-lead {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  justify-content: space-between;
+}
+
+.whetstone-block-body > div:first-child {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .whetstone-block-title {
@@ -3201,14 +3206,24 @@ section header .text-lead {
   padding-top: 0.85rem;
   border-top: 1px solid var(--border-subtle);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.82rem;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.whetstone-metric-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.2;
 }
 
 .whetstone-metric-tag {
   color: var(--color-copper);
   font-weight: 600;
+  font-size: 0.88rem;
+  line-height: 1.35;
 }
 
 /* --------------------------------------------------------------------------
