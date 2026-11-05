@@ -669,6 +669,46 @@
   margin-bottom: 0;
 }
 
+/* Page Intro Split Grid for Inner Pages Hero */
+.page-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 3.5vw, 3.5rem);
+  align-items: center;
+  width: 100%;
+  padding-top: clamp(2rem, 3.5vw, 3rem);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+@media (min-width: 900px) {
+  .page-intro-grid {
+    grid-template-columns: 1.25fr 0.85fr;
+  }
+}
+
+.page-intro-grid .page-intro-inner {
+  padding: 0;
+}
+
+.page-intro-media {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-surface);
+  aspect-ratio: 16 / 10;
+  max-height: 280px;
+  width: 100%;
+}
+
+.page-intro-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .page-intro {
     min-height: 320px;
@@ -919,6 +959,57 @@
 
 .feature-card-footer > a {
   margin-top: auto;
+}
+
+/* Dedicated Disciplines (Homepage 1) Consistent CTA Alignment */
+#sharpeningServices .services-grid,
+.services-grid {
+  align-items: stretch;
+}
+
+#sharpeningServices .feature-card,
+.services-grid .feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#sharpeningServices .feature-card-content,
+.services-grid .feature-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+#sharpeningServices .feature-card-desc,
+.services-grid .feature-card-desc {
+  flex: 1 1 auto;
+  margin-bottom: 1.25rem;
+}
+
+#sharpeningServices .feature-card-footer,
+.services-grid .feature-card-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  width: 100%;
+}
+
+#sharpeningServices .feature-card-footer .btn,
+.services-grid .feature-card-footer .btn {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  padding-inline: 0.75rem;
+  margin-top: 0;
 }
 
 /* Horizontal Craft Difference Grid */
@@ -1276,6 +1367,10 @@
 .pricing-section {
   padding: clamp(3.5rem, 6vw, 6rem) 0;
   border-bottom: 1px solid var(--border-light);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: clip;
 }
 
 .pricing-section--surface {
@@ -1323,11 +1418,13 @@
 /* Editorial Price Table */
 .editorial-price-table-wrap {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .editorial-price-table {
   width: 100%;
+  min-width: 640px;
   border-collapse: separate;
   border-spacing: 0;
   text-align: start;
@@ -1361,8 +1458,6 @@
   vertical-align: middle;
   font-size: 0.94rem;
   color: var(--text-body);
-  overflow-wrap: anywhere;
-  word-break: break-word;
   transition: background-color var(--transition-fast);
 }
 
@@ -1386,6 +1481,7 @@
   display: flex;
   align-items: center;
   gap: 0.85rem;
+  min-width: 175px;
 }
 
 .knife-table-thumb {
@@ -1403,13 +1499,17 @@
   font-size: 1.12rem;
   color: var(--text-primary);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.25;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 .knife-service-cell {
   font-size: 0.88rem;
   color: var(--text-muted);
   line-height: 1.5;
+  min-width: 170px;
 }
 
 .knife-time-badge {
@@ -1429,6 +1529,7 @@
   flex-direction: column;
   gap: 0.25rem;
   align-items: flex-start;
+  min-width: 125px;
 }
 
 .demo-price-val {
@@ -1451,8 +1552,58 @@
   white-space: nowrap;
 }
 
+/* Tablet & iPad Viewport Optimization (641px - 860px) */
+@media (min-width: 641px) and (max-width: 860px) {
+  .editorial-price-table th,
+  .editorial-price-table td {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .knife-table-thumb {
+    width: 44px;
+    height: 34px;
+  }
+
+  .knife-type-with-thumb {
+    gap: 0.55rem;
+    min-width: 155px;
+  }
+
+  .knife-name-cell {
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
+
+  .knife-service-cell {
+    font-size: 0.84rem;
+    min-width: 150px;
+  }
+
+  .knife-time-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .demo-price-wrap {
+    min-width: 115px;
+  }
+
+  .demo-price-val {
+    font-size: 1.05rem;
+  }
+
+  .demo-price-tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
 /* Responsive Table: Mobile Card Transformation (down to 200px) */
-@media (max-width: 680px) {
+@media (max-width: 640px) {
+  .editorial-price-table-wrap {
+    overflow-x: visible;
+  }
+
   .editorial-price-table thead {
     display: none;
   }
@@ -1463,12 +1614,14 @@
   .editorial-price-table td {
     display: block;
     width: 100%;
+    min-width: 0;
   }
 
   .editorial-price-table {
     border: none;
     background: transparent;
     box-shadow: none;
+    min-width: 0;
   }
 
   .editorial-price-table tr {
@@ -1515,6 +1668,23 @@
 
   .editorial-price-table td[data-label="Knife Type"]::before {
     display: none;
+  }
+
+  .knife-type-with-thumb {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .knife-name-cell {
+    white-space: normal;
+  }
+
+  .knife-service-cell {
+    min-width: 0;
+  }
+
+  .demo-price-wrap {
+    min-width: 0;
   }
 }
 
@@ -1916,9 +2086,12 @@
 /* Section 6: Request a Quote Layout & Form */
 .quote-layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: 900px) {
@@ -1927,10 +2100,18 @@
   }
 }
 
+.quote-intro-panel {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
 .quote-intro-panel p {
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 .quote-intro-img {
@@ -1959,6 +2140,10 @@
   font-size: 0.88rem;
   color: var(--text-body);
   line-height: 1.55;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 .quote-workshop-quickinfo {
@@ -1967,15 +2152,31 @@
   border-top: 1px solid var(--border-light);
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .quickinfo-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.65rem;
   font-size: 0.88rem;
   color: var(--text-muted);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.quickinfo-row span {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
+  line-height: 1.45;
 }
 
 .quickinfo-icon {
@@ -1983,20 +2184,51 @@
   height: 16px;
   color: var(--color-copper);
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .quote-form-panel {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
-  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  padding: clamp(1.25rem, 3.5vw, 2.5rem);
   box-shadow: var(--shadow-sm);
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .quote-form-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.15rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#btnSubmitQuote {
+  white-space: normal;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.85rem 1rem;
+  line-height: 1.35;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .quote-form-panel {
+    padding: 1.25rem 1rem;
+  }
+  .quote-prototype-callout {
+    padding: 0.85rem 1rem;
+  }
+  .quickinfo-row {
+    font-size: 0.84rem;
+  }
 }
 
 .form-group {
@@ -2393,6 +2625,85 @@
 
 .dropoff-step-text strong {
   color: var(--text-primary);
+}
+
+/* Interactive Workshop Map Section */
+.map-container-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-inline: auto;
+  max-width: 1040px;
+}
+
+.map-embed-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--bg-surface-elevated);
+}
+
+.map-embed-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+[data-theme="dark"] .map-embed-wrapper iframe {
+  filter: contrast(0.95) brightness(0.85);
+}
+
+.map-info-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background-color: var(--bg-surface-elevated);
+  border-top: 1px solid var(--border-light);
+}
+
+@media (min-width: 768px) {
+  .map-info-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+}
+
+.map-info-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  flex: 1 1 auto;
+}
+
+.map-info-col strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.map-info-col span {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.map-info-icon {
+  color: var(--color-copper);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.map-info-actions {
+  flex-shrink: 0;
 }
 
 /* Section 4 & 5 Forms & Upload */
@@ -2872,9 +3183,30 @@ section header,
 .pricing-section-header .eyebrow,
 .about-section-header .eyebrow,
 .section-title-wrap .eyebrow,
-section header .eyebrow {
+section header .eyebrow,
+.section-intro-centered .eyebrow,
+.h1-hero-content .eyebrow,
+.closing-cta-content .eyebrow {
   margin-inline: auto !important;
-  display: inline-block !important;
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.editorial-split .eyebrow,
+.about-manifesto-grid .eyebrow {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  margin-inline: 0 !important;
+}
+
+[dir="rtl"] .editorial-split .eyebrow,
+[dir="rtl"] .about-manifesto-grid .eyebrow {
+  text-align: right !important;
+  align-items: flex-start !important;
 }
 
 .section-header .text-lead,
